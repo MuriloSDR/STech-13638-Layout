@@ -98,10 +98,10 @@ input{
 }
 /* ESpercífico para alguns inputs*/
 input[type=text], input[type=email], input[type=tel], select, textarea{
-    widht: 100%;
+    width: 100%;
     padding: 12px;
-    border: 1px;
-    color: #ccc;
+    border: 1px solid black;
+    color: black;
     border-radius: 5px;
     resize: vertical;
 }
@@ -148,7 +148,7 @@ input[type=reset]:hover{
     margin-top: 6px;
 }
 
-.campo{
+.input{
     float: left;
     width: 75%;
     margin-top: 6px;
