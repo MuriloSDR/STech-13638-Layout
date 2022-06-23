@@ -1,90 +1,105 @@
-import react from 'react'
-<!DOCTYPE html></!DOCTYPE>
+<!DOCTYPE html>
 <html lang="pt-br">
-	<head><!-- cabeçalho da pagina hmtl-->
-		<title>Aula 04</title>
-		<meta charset="utf-8"/>
-		<meta name ="author" content="prof. jair Ferraz"/>
-		<meta nam="viewport" content=
-		"widht-device-width, initial-scale=1.0"
-		<meta name="keywords" content="html, css"/>
-		<!-- tags meta para motores de busca - SEO -->
-		<meta name="description" content="layout html"
-		<!-- estilo CSS -->
-		<link rel="stylesheet" href="estilo.css"/>		
-	</head>
-	<body>
-		<header>
-			<h1>Layout HTML</h1>
-			<nav>
-				<ul>
-					<li>
-						<a href="#">Home</a>
-					</li>
-					<li>
-						<a href="#">Conteudo</a>
-					</li>
-					<li>
-						<a href="#">galeria</a>
-					</li>
-					<li>
-						<a href="#">contato</a>
-					</li>
-				</ul>
-			</nav>
-			<div class="container">
-				<div class="esquerda">
-					<h2>Sobre:</h2>
-					<p>Mussum Ipsum, cacilds vidis litro abertis. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.Quem num gosta di mé, boa gentis num é.In elementis mé pra quem é amistosis quis leo.Mais vale um bebadis conhecidiss, que um alcoolatra anonimis.</p>
-					<h2>Histórico</h2>
-					<p>Mussum Ipsum, cacilds vidis litro abertis.</p>
-					<div class="imgFake" style="height:200px">
-						Imagem 1
-					</div>
-					<div class="imgFake" style="height:200px">
-						Imagem 2
-					</div>
-					<div class="imgFake" style="height:200px">
-						Imagem 3
-					</div>
-				</div>
-				<div class="Conteudo">
-					<h2>conteúdo da página</h2>
-					<h5>
-						<script>
-							/*< JS para pegar a data atual>*/
-							date= new Date().toLocaleDateString();
-							document.write(date);
-						</script>
-					</h5>
-					<div class="imgFake" style="height:200px">
-							Imagem 4
-					</div>
-					<p>Mussun Ipsum ...</p>
-					<p>Mussum Ipsum, cacilds vidis litro abertis. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.Quem num gosta di mé, boa gentis num é.In elementis mé pra quem é amistosis quis leo.Mais vale um bebadis conhecidiss, que um alcoolatra anonimis.</p>
-					<picture>
-						<source media="(min-width: 600px)" 
-						srcset="./imagens/imgMedia.jpg"
-						width="600px"/>
-						<source media="(min-width: 465px)" 
-						srcset="./imagens/imgPequena.jpg"/>
-						<img src="./imagens/caminho.jpg"
-						alt="Caminho entre árvores"
-						style="max-width:100%; height:auto;"/>
-					</picture>
-					<br/>
-					<h2>Subtítulo ...</h2>
-					<h5>13/06/2022</h5>
-					<p>Musunzinho</p>
-					<p>Mussum Ipsum, cacilds vidis litro abertis. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.Quem num gosta di mé, boa gentis num é.In elementis mé pra quem é amistosis quis leo.Mais vale um bebadis conhecidiss, que um alcoolatra anonimis.</p>
-				</div>
+
+<head>
+	<!-- cabeçalho da pagina hmtl-->
+	<title>Aula 04</title>
+	<meta charset="utf-8" />
+	<meta name="author" content="prof. jair Ferraz" />
+	<meta nam="viewport" content="widht-device-width, initial-scale=1.0">
+	<meta name="keywords" content="html, css" />
+	<!-- tags meta para motores de busca - SEO -->
+	<meta name="description" content="layout html">
+	<!-- estilo CSS -->
+	<link rel="stylesheet" href="estilo.css" />
+</head>
+
+<body>
+	<header>
+		<h1>Layout HTML</h1>
+	</header>
+		<nav>
+			<ul>
+				<li>
+					<a href="index.html">Home</a>
+				</li>
+				<li>
+					<a href="#">Conteudo</a>
+				</li>
+				<li>
+					<a href="#">galeria</a>
+				</li>
+				<li>
+					<a href="contato.html">contato</a>
+				</li>
+			</ul>
+		</nav>
+	<div class="container">
+		<div class="esquerda">
+			<h2>Sobre:</h2>
+			<p>Mussum Ipsum, cacilds vidis litro abertis. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua
+				vidis.Quem num gosta di mé, boa gentis num é.In elementis mé pra quem é amistosis quis leo.Mais vale um
+				bebadis conhecidiss, que um alcoolatra anonimis.</p>
+			<h2>Histórico</h2>
+			<p>Mussum Ipsum, cacilds vidis litro abertis.</p>
+			<div class="imgFake" style="height:200px">
+				Imagem 1
 			</div>
-			<div class="footer">
-				<h2>Footer</h2>
-				<br/>
-				&copy; Todos os direitos reservados. Prof. Jair Ferraz.
-				prof
+			<div class="imgFake" style="height:200px">
+				Imagem 2
 			</div>
-		</header>
-	</body>
-<html/>
+			<div class="imgFake" style="height:200px">
+				Imagem 3
+			</div>
+		</div>
+		<div class="conteudo">
+			<h2>conteúdo da página</h2>
+			<h5>
+				<script>
+					/*< JS para pegar a data atual>*/
+					date = new Date().toLocaleDateString();
+					document.write(date);
+				</script>
+			</h5>
+			<div class="imgFake" style="height:200px">
+			Imagem 1
+		</div>
+		<div class="imgFake" style="height:200px">
+			Imagem 2
+		</div>
+		<div class="imgFake" style="height:200px">
+			Imagem 3
+			</div>
+			<div class="imgFake" style="height:200px">
+				Imagem 4
+				</div>
+			<p>Mussun Ipsum ...</p>
+			<p>Mussum Ipsum, cacilds vidis litro abertis. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua
+				vidis.Quem num gosta di mé, boa gentis num é.In elementis mé pra quem é amistosis quis leo.Mais vale um
+				bebadis conhecidiss, que um alcoolatra anonimis.</p>
+			<picture>
+				<source media="(min-width: 600px)"
+				 srcset="./imagens/imgMedia.jpg" 
+				 width="600px" />
+				<source media="(min-width: 465px)" 
+				srcset="./imagens/imgPequena.jpg" />
+				<img src="./imagens/caminho.jpg" 
+				alt="Caminho entre árvores" 
+				style="max-width:100%; height:auto;" />
+			</picture>
+			<br />
+			<h2>Subtítulo ...</h2>
+			<h5>13/06/2022</h5>
+			<p>Musunzinho</p>
+			<p>Mussum Ipsum, cacilds vidis litro abertis. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua
+				vidis.Quem num gosta di mé, boa gentis num é.In elementis mé pra quem é amistosis quis leo.Mais vale um
+				bebadis conhecidiss, que um alcoolatra anonimis.</p>
+		</div>
+		<div class="footer">
+			<h2>Footer</h2>
+			&copy; Todos os direitos reservados. Prof. Jair Ferraz.
+			prof
+		</div>
+	</div>
+</body>
+</html>
