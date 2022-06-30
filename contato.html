@@ -75,7 +75,7 @@
                         <label>Nome Completo: </label>
                     </div>
                     <div class="input">
-                        <input type="text" id="nome" name="nome"/>
+                        <input type="text" id="nome" name="nome" />
                     </div>
                 </div>
 
@@ -84,7 +84,7 @@
                         <label>e-mail: </label>
                     </div>
                     <div class="input">
-                        <input type="email" id="email" name="email"/>
+                        <input type="email" id="email" name="email" />
                     </div>
                 </div>
 
@@ -93,7 +93,7 @@
                         <label>Telefone: </label>
                     </div>
                     <div class="input">
-                        <input type="text" id="telefone" name="telefone" oninput="mascaraTelefone(this)"/>
+                        <input type="text" id="telefone" name="telefone" oninput="mascaraTelefone(this)" />
                     </div>
                 </div>
 
@@ -102,7 +102,7 @@
                         <label>Endereço: </label>
                     </div>
                     <div class="input">
-                        <input type="text" id="endereco"  name="endereco"/>
+                        <input type="text" id="endereco" name="endereco" />
                     </div>
                 </div>
                 <div class="row">
@@ -110,10 +110,12 @@
                         <label>Tipo Pessoa</label>
                     </div>
                     <div class="input">
-                        <input type="radio" id="tpCPF" name="tpPessoa" onclick="document.getElementById('divCNPJ').style.visibility='hidden';document.getElementById('divCPF').style.visibility='visible'"/>
+                        <input type="radio" id="tpCPF" name="tpPessoa"
+                            onclick="document.getElementById('divCNPJ').style.visibility='hidden';document.getElementById('divCPF').style.visibility='visible'" />
                         CPF
 
-                        <input type="radio" id="tpCNPJ" name="tpPessoa" onclick="document.getElementById('divCNPJ').style.visibility='visible';document.getElementById('divCPF').style.visibility='hidden'"/>
+                        <input type="radio" id="tpCNPJ" name="tpPessoa"
+                            onclick="document.getElementById('divCNPJ').style.visibility='visible';document.getElementById('divCPF').style.visibility='hidden'" />
                         CNPJ
                     </div>
                 </div>
@@ -122,7 +124,7 @@
                         <label>CPF: </label>
                     </div>
                     <div class="input">
-                        <input type="text" id="cpf" name="cpf" oninput="mascaraCPF(this)"/>
+                        <input type="text" id="cpf" name="cpf" oninput="mascaraCPF(this)" />
                     </div>
                 </div>
                 <div class="row" id="divCNPJ" style="visibility:hidden">
@@ -130,7 +132,7 @@
                         <label>CNPJ: </label>
                     </div>
                     <div class="input">
-                        <input type="text" id="cnpj" name="cnpj" oninput="mascaraCNPJ(this)"/>
+                        <input type="text" id="cnpj" name="cnpj" oninput="mascaraCNPJ(this)" />
                     </div>
                 </div>
 
@@ -139,7 +141,15 @@
                         <label>Senha: </label>
                     </div>
                     <div class="input">
-                        <input type="password" id="senha" name="senha"/>
+                        <input type="password" id="senha" name="senha" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="label">
+                        <label>Confirme a Senha: </label>
+                    </div>
+                    <div class="input">
+                        <input type="password" id="confirmesenha" name="confirmesenha" />
                     </div>
                 </div>
 
@@ -148,17 +158,16 @@
                         <label>Foto de perfil: </label>
                     </div>
                     <div class="input">
-                        <input type="file" id="imgUser" name="imgUser"/>
+                        <input type="file" id="imgUser" name="imgUser" />
                     </div>
                 </div>
                 <div id="imgExibir">
-                    <img id="preview " src=""/>
+                    <img id="preview" src="">
                 </div>
                 <div class="row">
-                    <input type="reset" value="Limpar"/>
-                    <input type="submit" value="Enviar" onclick="return validar()"/>
+                    <input type="reset" value="Limpar" />
+                    <input type="submit" value="Enviar" onclick="return validar()" />
                 </div>
-
             </form>
         </div>
         <div class="footer">
@@ -167,6 +176,9 @@
             prof
         </div>
     </div>
+    <script>
+        document.getElementById("imgUser").addEventListener("change", lerImg, false);
+    </script>
 </body>
 
 </html>

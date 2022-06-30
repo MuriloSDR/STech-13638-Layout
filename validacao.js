@@ -7,6 +7,7 @@ function validar() {
     var senha = formUser.senha.value;
     var cpf = formUser.cpf.value;
     var cnpj = formUser.cnpj.value;
+    var confirmesenha = formUser.confirmesenha.value;
 
     if (nome == "" || nome.length <= 3) {
         alert("informe o nome completo!");
@@ -41,7 +42,7 @@ function validar() {
         return false;
     }
 
-    if (senha == "" || senha.length <= 6) {
+    if (senha == "" || senha.length < 6) {
         alert("Informe a senha de 6 Digitos!");
         formUser.senha.focus();
         return false;
@@ -70,36 +71,56 @@ function validar() {
             return false;
         }
     }
+    if (confirmesenha != senha || confirmesenha == "") {
+        if (confirmesenha.length < 6) {
+            alert("Senhas diferentes!");
+            formUser.confirmesenha.focus();
+            return false;
+        }
+    }
 }
 function mascaraCPF(i) {
     const v = i.value;
-    if (isNaN(v[v.length -1])) {
-        i.value = v.substring(0,v.length -1);
+    if (isNaN(v[v.length - 1])) {
+        i.value = v.substring(0, v.length - 1);
         return;
     }
-    i.setAttribute("maxlength","14");
-    if (v.length == 3 || v.length == 7) i.value +="."
-    if(v.length == 11) i.value += "-"; 
+    i.setAttribute("maxlength", "14");
+    if (v.length == 3 || v.length == 7) i.value += "."
+    if (v.length == 11) i.value += "-";
 }
 function mascaraCNPJ(i) {
     const v = i.value;
-    if (isNaN(v[v.length -1])) {
-        i.value = v.substring(0,v.length -1);
+    if (isNaN(v[v.length - 1])) {
+        i.value = v.substring(0, v.length - 1);
         return;
     }
-    i.setAttribute("maxlength","18");
-    if (v.length == 2 || v.length == 6) i.value +="."
-    if(v.length == 10) i.value +="/"
-    if(v.length == 15) i.value += "-"; 
+    i.setAttribute("maxlength", "18");
+    if (v.length == 2 || v.length == 6) i.value += "."
+    if (v.length == 10) i.value += "/"
+    if (v.length == 15) i.value += "-";
 }
 function mascaraTelefone(i) {
     const v = i.value;
-    if (isNaN(v[v.length -1])) {
-        i.value = v.substring(0,v.length -1);
+    if (isNaN(v[v.length - 1])) {
+        i.value = v.substring(0, v.length - 1);
         return;
     }
-    i.setAttribute("maxlength","14");
-    if (v.length == 1 ) i.value ="(" + i.value;
-    if(v.length == 3) i.value +=")";
-    if(v.length == 9) i.value += "-"; 
+    i.setAttribute("maxlength", "14");
+    if (v.length == 1) i.value = "(" + i.value;
+    if (v.length == 3) i.value += ")";
+    if (v.length == 9) i.value += "-";
+}
+
+function lerImg() {
+    if (this.files && this.files[0]) {
+   
+        var file = new FileReader();
+        file.onload = function(e){
+            document.getElemntById("preview").src = e.target.result;
+            
+        }
+        file.readAsDataURL(this.files[0]);
+    }
+  
 }
